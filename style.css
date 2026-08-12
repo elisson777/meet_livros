@@ -210,76 +210,96 @@ nav ul{
 }
 
 
-
-.fotter-coluna{
-    justify-content: center;
-
+footer{
+    background-image: linear-gradient(#ac260f, #809eb396);
+    color: #FFF;
+    padding: 10px;
 }
 
 
-footer {
-    width: 100%;
-    background: #0a0000;
-    color: #fff;
-    padding: 50px 8% 20px;
-    box-sizing: border-box;
-}
-
-.footer-container {
-    max-width: 1200px;
+.footer-container{
+    display: flex;
+    max-width: 80vw;
     margin: 0 auto;
+    justify-content: space-between;
+}
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+.logo{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.footer-coluna p {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 
-.footer-coluna {
+.footer-coluna{
     display: flex;
     flex-direction: column;
+    max-width: 28vw;
 }
-
-
-.footer-coluna h4 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #fff;
-    font-weight: 600;
-}
-
 
 .footer-coluna ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-coluna ul li {
-    margin-bottom: 12px;
-    color: #aaa;
-    font-size: 14px;
-}
-
-/* Links */
-.footer-coluna a {
-    color: #aaa;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s ease;
-}
-
-.footer-coluna a:hover {
-    color: #fff;
-    padding-left: 5px;
-}
-
-
-
-.footer-social {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 0;
+}
+ a{
+    text-decoration: none;
+    color: #FFF;
+ }
+
+
+ .footer-coluna h4{
+    color: #FFF;
+ }
+
+
+ .footer-social{
+    padding: 15px;
+ }
+
+.footer-linha{
+    max-width: 70vw;
+    margin: 20px auto;
+    border: 1px solid var(--laranja-escurao);
 }
 
+.footer-copy{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 22px;
+}
 
+\.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    font-size: 40px;
+    color: #eee8e8;
+}
+
+.footer-social a:hover {
+    color: #060607;
+    transform: scale(1.2);
+}
+
+  
+
+
+
+
+
+#inicio{
+    scroll-margin-top:10vh; 
+}
+#livros{
+    scroll-margin-top:10vh; 
+}
