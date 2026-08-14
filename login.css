@@ -1,0 +1,314 @@
+@import url(style.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a0606, #0a0101);
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTAINER PRINCIPAL */
+
+main {
+    width: 1142px;
+    height: 673px;
+
+    display: flex;
+
+    border: 1px solid #333;
+    border-radius: 15px;
+    overflow: hidden;
+
+    background: #000000;
+
+    box-shadow: 0 20px 60px rgba(11, 41, 124, 0.959);
+}
+
+/* ÁREA DA IMAGEM */
+
+.sessao-imagem {
+    width: 522px;
+    height: 673px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.sessao-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* ÁREA DE LOGIN */
+
+.sessao-login {
+    width: 620px;
+    height: 673px;
+
+    padding: 70px 80px;
+
+    background: linear-gradient(
+        160deg,
+        #140706,
+        #834e8377 55%,
+        #102f55
+    );
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* TÍTULO */
+
+.area-titulo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.area-titulo h1 {
+    color: white;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.area-titulo h1 span {
+    color: #d6d6d6;
+}
+
+.area-titulo h2 {
+    margin-top: 8px;
+
+    color: #eeeeee;
+
+    font-size: 18px;
+    font-weight: 40;
+}
+
+/* FORMULÁRIO */
+
+#form-login {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABELS */
+
+#form-login > label {
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+/* INPUTS */
+
+#form-login > input {
+    width: 100%;
+    height: 48px;
+
+    margin-bottom: 22px;
+
+    padding: 0 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+
+    outline: none;
+
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+#form-login > input::placeholder {
+    color: #aaa;
+}
+
+#form-login > input:focus {
+    border-color: #ffffff;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+/* LEMBRAR SENHA */
+
+.link-senha {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.link-senha div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.link-senha label {
+    color: #ddd;
+    font-size: 13px;
+}
+
+#lembrar-senha {
+    width: 15px;
+    height: 15px;
+
+    cursor: pointer;
+}
+
+/* LINK ESQUECEU A SENHA */
+
+#link-esqueceu-conta {
+    color: white;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+#link-esqueceu-conta:hover {
+    text-decoration: underline;
+}
+
+/* BOTÃO */
+
+#btn-acessar {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: white;
+    color: #222;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#btn-acessar:hover {
+    background: #dddddd;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#btn-acessar:active {
+    transform: translateY(0);
+}
+
+/* LINK DE CADASTRO */
+
+#form-login > a:last-child {
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #eeeeee;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+#form-login > a:last-child:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+main {
+    position: relative;
+    width: 1142px;
+    height: 673px;
+
+    display: flex;
+
+    border-radius: 15px;
+
+    background: #111;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+main::before {
+    content: "";
+
+    position: absolute;
+    inset: -3px;
+
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        #ff3b30,
+        #006eff,
+        transparent
+    );
+
+    animation: borda 4s linear infinite;
+
+    z-index: -2;
+}
+
+main::after {
+    content: "";
+
+    position: absolute;
+    inset: 2px;
+
+    background: #111;
+
+    border-radius: 13px;
+
+    z-index: -1;
+}
+
+@keyframes borda {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
