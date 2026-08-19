@@ -1,0 +1,378 @@
+@import url(style.css);
+
+/* =========================
+   CONFIGURAÇÃO GERAL
+========================= */
+
+
+ body {
+        background: linear-gradient(
+            135deg,
+            #050505 0%,
+            #071522 50%,
+            #120505 100%
+        );
+    
+        width: 100vw;
+        height: 100vh;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        color: #fff;
+  }
+
+
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+
+main {
+    width: 1142px;
+    height: 661px;
+
+    display: flex;
+
+    background: #0b0b0b;
+
+    border: 1px solid #123a5c;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 15px rgba(22, 140, 255, 0.35),
+        0 0 30px rgba(229, 9, 20, 0.20);
+}
+
+
+/* =========================
+   ÁREA ESQUERDA
+========================= */
+
+.sessao-imagem {
+    width: 510px;
+    height: 661px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #020202,
+            #06182a,
+            #180505
+        );
+
+    position: relative;
+}
+
+
+/* Título da esquerda */
+
+.sessao-imagem h1 {
+    font-size: 48px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 10px rgba(22, 140, 255, 0.6),
+        0 0 20px rgba(229, 9, 20, 0.4);
+
+    position: relative;
+}
+
+
+/* Linha decorativa */
+
+.sessao-imagem h1::after {
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 4px;
+
+    margin: 15px auto 0;
+
+    background: linear-gradient(
+        to right,
+        #168cff,
+        #e50914
+    );
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   ÁREA DO CADASTRO
+========================= */
+
+.sessao-login {
+    width: 620px;
+    height: 661px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #0b0b0b;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.area-titulo {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.area-titulo h1 {
+    font-size: 36px;
+
+    color: #168cff;
+
+    font-weight: 600;
+
+    text-shadow:
+        0 0 8px rgba(22, 140, 255, 0.5);
+}
+
+.area-titulo h1 span {
+    color: #e50914;
+}
+
+.area-titulo h2 {
+    font-size: 22px;
+
+    color: #aaa;
+
+    font-weight: 400;
+
+    margin-top: 5px;
+}
+
+form input{
+    
+
+    width: 100%;
+
+    height: 50px;
+
+    padding: 5px 12px;
+
+    font-size: 17px;
+
+    color: #fff;
+
+    background: #111;
+
+    border: 1px solid #29435a;
+
+    border-radius: 100px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+form {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 434px;
+
+    gap: 5px;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+form label {
+    color: #168cff;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+#usuario {
+    width: 100%;
+
+    height: 50px;
+
+    padding: 5px 12px;
+
+    font-size: 17px;
+
+    color: #fff;
+
+    background: #111;
+
+    border: 1px solid #29435a;
+
+    border-radius: 100px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* Quando clicar no campo */
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="senha"]:focus {
+
+    
+    width: 100%;
+    height: 40px;
+
+    background: #111;
+    color: white;
+
+    border: 2px solid #dfdfdf;
+    border-radius: 5px;
+
+    padding: 5px 156px;
+
+    outline: none;
+  
+}
+
+
+/* Placeholder */
+
+form input::placeholder {
+    color: #153cbe;
+   font-size: 17px;
+   border-radius: 0px
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.links-senha {
+    display: flex;
+
+    align-items: center;
+
+    margin-top: 22px;
+}
+
+.links-senha input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+
+    accent-color: #e50914;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   BOTÃO CADASTRAR
+========================= */
+
+#btn-criar {
+    margin-top: 18px;
+
+    padding: 12px;
+
+    width: 100%;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        to right,
+        #0066cc,
+        #3e50f1,
+        #d90416
+    );
+
+    border: none;
+
+    border-radius: 17px;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    transition: 0;
+}
+
+
+/* Hover */
+
+#btn-criar:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 12px rgba(33, 117, 201, 0.979),
+        0 0 15px rgba(217, 4, 22, 0.4);
+}
+
+
+/* =========================
+   LINK ENTRAR
+========================= */
+
+#btn-entrar {
+    margin-top: 12px;
+
+    color: #168cff;
+
+    font-size: 16px;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+#btn-entrar:hover {
+    color: #e50914;
+
+    text-shadow:
+        0 0 8px rgba(229, 9, 20, 0.5);
+}
+

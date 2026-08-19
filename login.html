@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="#">
     <title>Área de Login</title>
 </head>
 <body>
@@ -10,37 +12,36 @@
     <main>
 
         <section class="sessao-imagem">
-            <img src="IMG/agamenon.jpg" alt="agamenom">
+            <img src="IMG/agamenon.jpg" alt="Casal numa livraria">
         </section>
         
         <section class="sessao-login">
             <div class="area-titulo">
                 <h1>Noir<span>Books</span></h1>
-                <h2>Cada pagina uma historia</h2>
+                <h2>Faca login Anta </h2>
             </div>
-                        <!--- area de login___formulario -->
+
             <form action="#" method="post" id="form-login">
 
-                <label for="E-mail">E-mail</label>
-                <input type="text" id="E-mail" placeholder="E-mail anta">
-
-                <label for="senha">senha</label>
-                <input type="password" id="senha" placeholder="senha agora retardado">
+                <label for="email"> Usuário ou Email</label>
+                <input type="text" id="email" placeholder="Informe seu email">
                 
-                <div class="link-senha">
+                <label for="senha"> Senha </label>
+                <input type="password" id="senha" placeholder="Informe sua senha">
+
+                <div class="links-senha"> 
                     <input type="checkbox" id="lembrar-senha">
-                    <label for="lembrar-senha">lembrar senha</label>
-
-                    <a href="#" id="link-esqueceu-conta"> esqueceu a senha</a>
-
+                    <label for="lembrar-senha"> Lembrar senha </label>
+                    
+                    <a href="index.html" id="link-esqueceu-senha"> Esqueceu a senha? </a>
                 </div>
-                <button id="btn-aceessar"> acessar </button>
-                <a href="link-nao-tem-conta">ainda nao tem conta</a>
 
+                <button id="btn-acessar"> Acessar </button>
+                <a href="cadastro.html" id="cadastre-se"> Ainda não possuo uma conta </a>
 
             </form>
-        </section>
 
+        </section>
 
     </main>
 

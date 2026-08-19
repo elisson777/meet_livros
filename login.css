@@ -1,50 +1,64 @@
 @import url(style.css);
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* =========================
+   CONFIGURAÇÃO GERAL
+========================= */
 
 body {
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #1a0606, #0a0101);
-    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #050505 0%,
+        #071522 50%,
+        #120505 100%
+    );
+
+    width: 100vw;
+    height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    color: #fff;
 }
 
-/* CONTAINER PRINCIPAL */
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
 
 main {
     width: 1142px;
-    height: 673px;
+    height: 661px;
 
     display: flex;
 
-    border: 1px solid #333;
-    border-radius: 15px;
+    background: #0b0b0b;
+
+    border: 1px solid #123a5c;
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 15px rgba(0, 110, 255, 0.35),
+        0 0 30px rgba(255, 0, 0, 0.15);
+
     overflow: hidden;
-
-    background: #000000;
-
-    box-shadow: 0 20px 60px rgba(11, 41, 124, 0.959);
 }
 
-/* ÁREA DA IMAGEM */
+
+/* =========================
+   SESSÃO DA IMAGEM
+========================= */
 
 .sessao-imagem {
-    width: 522px;
-    height: 673px;
+    width: 510px;
+    height: 661px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    overflow: hidden;
+    background: #050505;
 }
 
 .sessao-imagem img {
@@ -53,262 +67,300 @@ main {
 
     object-fit: cover;
 
-    display: block;
+    border-radius: 10px 0 0 10px;
+
+    filter: brightness(0.75);
 }
 
-/* ÁREA DE LOGIN */
+
+/* =========================
+   SESSÃO LOGIN
+========================= */
 
 .sessao-login {
-    width: 620px;
     height: 673px;
-
-    padding: 70px 80px;
-
-    background: linear-gradient(
-        160deg,
-        #140706,
-        #834e8377 55%,
-        #102f55
-    );
+    width: 620px;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #0b0b0b;
 }
 
-/* TÍTULO */
+
+/* =========================
+   TÍTULO
+========================= */
 
 .area-titulo {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
+}
+
+.area-titulo h1,
+.area-titulo span {
+    font-size: 36px;
+    padding-bottom: 5px;
 }
 
 .area-titulo h1 {
-    color: white;
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    color: #168cff;
+    font-weight: 600;
+
+    text-shadow:
+        0 0 8px rgba(22, 140, 255, 0.5);
 }
 
-.area-titulo h1 span {
-    color: #d6d6d6;
+.area-titulo span {
+    color: #e50914;
 }
 
 .area-titulo h2 {
-    margin-top: 8px;
+    font-size: 24px;
 
-    color: #eeeeee;
+    color: #bdbdbd;
 
-    font-size: 18px;
-    font-weight: 40;
+    font-weight: 400;
 }
 
-/* FORMULÁRIO */
 
-#form-login {
-    width: 100%;
+/* =========================
+   FORMULÁRIO
+========================= */
 
+form {
     display: flex;
     flex-direction: column;
+
+    width: 434px;
+
+    gap: 5px;
 }
 
-/* LABELS */
+form input {
+    height: 42px;
 
-#form-login > label {
-    color: white;
+    padding: 5px 12px;
 
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 18px;
 
-    margin-bottom: 8px;
-}
+    color: #fff;
 
-/* INPUTS */
+    background: #111;
 
-#form-login > input {
-    width: 100%;
-    height: 48px;
+    border: 1px solid #29435a;
 
-    margin-bottom: 22px;
-
-    padding: 0 15px;
-
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 8px;
+    border-radius: 5px;
 
     outline: none;
 
-    background: rgba(0, 0, 0, 0.35);
-    color: white;
+    transition: 0.3s;
+}
 
-    font-size: 15px;
+
+/* Efeito ao clicar no campo */
+
+form input:focus {
+    border-color: #eb3700;
+
+    box-shadow:
+        0 0 8px rgba(22, 140, 255, 0.4);
+}
+
+
+/* =========================
+   EMAIL
+========================= */
+
+#email {
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   LABELS
+========================= */
+
+form label {
+    color: #168cff;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+button {
+    margin-top: 20px;
+
+    padding: 12px;
+
+    font-size: 18px;
+
+    background:scroll;
+
+    border: ;
+
+    border-radius: 5px;
+
+    color: #fff;
+
+    font-weight: 600;
+
+    cursor: pointer;
 
     transition: 0.3s;
 }
 
-#form-login > input::placeholder {
+
+/* Hover do botão */
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 12px rgba(255, 22, 22, 0.959),
+        0 0 15px rgba(241, 0, 20, 0.979);
+}
+
+
+/* =========================
+   LINKS E SENHA
+========================= */
+
+.links-senha {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.links-senha label {
+    position: relative;
+
+    right: 75px;
+}
+
+.links-senha label,
+.links-senha input,
+.links-senha a {
+    color: #168cff;
+
+    font-weight: 400;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+section a {
+    color: #168cff;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+section a:hover {
+    color: #e50914;
+
+    font-weight: 600;
+
+    text-shadow:
+        0 0 8px rgba(229, 9, 20, 0.5);
+}
+
+
+/* =========================
+   LINK "NÃO TENHO CONTA"
+========================= */
+
+#link-nao-conta {
+    text-align: center;
+
+    margin-top: 25px;
+
     color: #aaa;
 }
 
-#form-login > input:focus {
-    border-color: #ffffff;
-
-    background: rgba(0, 0, 0, 0.5);
-
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+#link-nao-conta a {
+    color: #e50914;
 }
 
-/* LEMBRAR SENHA */
-
-.link-senha {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    margin-bottom: 30px;
+#link-nao-conta a:hover {
+    color: #168cff;
 }
 
-.link-senha div {
-    display: flex;
-    align-items: center;
-    gap: 7px;
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.links-senha input[type="checkbox"] {
+    accent-color: #e50914;
+
+    width: 16px;
+    height: 16px;
 }
 
-.link-senha label {
-    color: #ddd;
-    font-size: 13px;
-}
 
-#lembrar-senha {
-    width: 15px;
-    height: 15px;
+/* =========================
+   RESPONSIVIDADE
+========================= */
 
-    cursor: pointer;
-}
+@media (max-width: 900px) {
 
-/* LINK ESQUECEU A SENHA */
-
-#link-esqueceu-conta {
-    color: white;
-
-    font-size: 13px;
-
-    text-decoration: none;
-
-    transition: 0.3s;
-}
-
-#link-esqueceu-conta:hover {
-    text-decoration: underline;
-}
-
-/* BOTÃO */
-
-#btn-acessar {
-    width: 100%;
-    height: 50px;
-
-    border: none;
-    border-radius: 8px;
-
-    background: white;
-    color: #222;
-
-    font-size: 16px;
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-#btn-acessar:hover {
-    background: #dddddd;
-
-    transform: translateY(-2px);
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-#btn-acessar:active {
-    transform: translateY(0);
-}
-
-/* LINK DE CADASTRO */
-
-#form-login > a:last-child {
-    margin-top: 25px;
-
-    text-align: center;
-
-    color: #eeeeee;
-
-    font-size: 14px;
-
-    text-decoration: none;
-
-    transition: 0.3s;
-}
-
-#form-login > a:last-child:hover {
-    color: white;
-    text-decoration: underline;
-}
-
-main {
-    position: relative;
-    width: 1142px;
-    height: 673px;
-
-    display: flex;
-
-    border-radius: 15px;
-
-    background: #111;
-
-    overflow: hidden;
-
-    z-index: 1;
-}
-
-main::before {
-    content: "";
-
-    position: absolute;
-    inset: -3px;
-
-    background: conic-gradient(
-        from 0deg,
-        transparent,
-        #ff3b30,
-        #006eff,
-        transparent
-    );
-
-    animation: borda 4s linear infinite;
-
-    z-index: -2;
-}
-
-main::after {
-    content: "";
-
-    position: absolute;
-    inset: 2px;
-
-    background: #111;
-
-    border-radius: 13px;
-
-    z-index: -1;
-}
-
-@keyframes borda {
-    0% {
-        transform: rotate(0deg);
+    main {
+        width: 90%;
+        height: auto;
     }
 
-    100% {
-        transform: rotate(360deg);
+    .sessao-imagem {
+        display: none;
+    }
+
+    .sessao-login {
+        width: 100%;
+        height: 600px;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    main {
+        width: 95%;
+    }
+
+    .sessao-login {
+        height: 550px;
+    }
+
+    form {
+        width: 85%;
+    }
+
+    .area-titulo h1,
+    .area-titulo span {
+        font-size: 30px;
+    }
+
+    .area-titulo h2 {
+        font-size: 20px;
     }
 }

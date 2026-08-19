@@ -1,0 +1,278 @@
+```css
+/* ==============================
+   RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   BODY
+============================== */
+
+body {
+    min-height: 100vh;
+
+    padding: 50px 5%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #050505,
+            #071522,
+            #120505
+        );
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #fff;
+}
+
+
+/* ==============================
+   TÍTULO
+============================== */
+
+.tit {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.tit h1 {
+    font-size: 42px;
+
+    color: #168cff;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 10px rgba(22, 140, 255, 0.5);
+}
+
+.tit h1::after {
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 4px;
+
+    margin: 12px auto;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        to right,
+        #168cff,
+        #e50914
+    );
+}
+
+.tit p {
+    color: #aaa;
+
+    font-size: 17px;
+}
+
+
+/* ==============================
+   LISTA DE LIVROS
+============================== */
+
+.lista-livros {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ==============================
+   CARD DO LIVRO
+============================== */
+
+.novos_livros {
+
+    background: #0b0b0b;
+
+    border: 1px solid #1c3b55;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Efeito ao passar o mouse */
+
+.novos_livros:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #168cff;
+
+    box-shadow:
+        0 10px 25px rgba(22, 140, 255, 0.25),
+        0 0 15px rgba(229, 9, 20, 0.15);
+}
+
+
+/* ==============================
+   IMAGEM DO LIVRO
+============================== */
+
+.foto-livro {
+
+    width: ;
+
+    height: 300px;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: 0.3s;
+}
+
+
+/* Zoom da imagem */
+
+.novos_livros:hover .foto-livro {
+
+    transform: scale(1.03);
+}
+
+
+/* ==============================
+   INFORMAÇÕES
+============================== */
+
+.info-livro {
+
+    padding: 20px;
+}
+
+
+/* ==============================
+   CATEGORIA
+============================== */
+
+.categoria-livro {
+
+    display: inline-block;
+
+    padding: 1px 10px;
+
+    border-radius: 20px;
+
+    background: rgba(22, 140, 255, 0.15);
+
+    border: 1px solid #168cff;
+
+    color: #168cff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+
+/* ==============================
+   TÍTULO DO LIVRO
+============================== */
+
+.titulo-livro {
+
+    margin-top: 15px;
+
+    font-size: 21px;
+
+    color: #fff;
+}
+
+
+/* ==============================
+   AUTOR
+============================== */
+
+.autor-livro {
+
+    margin-top: 8px;
+
+    color: #999;
+
+    font-size: 15px;
+}
+
+
+/* ==============================
+   BOTÃO
+============================== */
+
+.btn-livros {
+
+    width: 16%;
+
+    margin-top: 20px;
+
+    padding: 11px;
+
+    border: flex;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            to right,
+            #0066cc,
+            #168cff,
+            #d90416
+        );
+
+    color: #fff;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+    display: flex;
+}
+
+
+/* Hover do botão */
+
+.btn-livros:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 12px rgba(22, 140, 255, 0.5),
+        0 0 15px rgba(229, 9, 20, 0.4);
+}
+
+
+
