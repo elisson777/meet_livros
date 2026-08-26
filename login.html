@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="#">
+    
     <title>Área de Login</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
                 <h2>Faca login Anta </h2>
             </div>
 
-            <form action="#" method="post" id="form-login">
+            <form action="#" id="form-login">
 
                 <label for="email"> Usuário ou Email</label>
                 <input type="text" id="email" placeholder="Informe seu email">
@@ -36,7 +36,9 @@
                     <a href="index.html" id="link-esqueceu-senha"> Esqueceu a senha? </a>
                 </div>
 
-                <button id="btn-acessar"> Acessar </button>
+                <label id="msg-login"> </label>
+
+                <button type="button" id="btn-acessar"> Acessar </button>
                 <a href="cadastro.html" id="cadastre-se"> Ainda não possuo uma conta </a>
 
             </form>
@@ -44,7 +46,6 @@
         </section>
 
     </main>
-
-    
+<script src="login.js"></script>
 </body>
 </html>
